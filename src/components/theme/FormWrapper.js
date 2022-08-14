@@ -43,8 +43,8 @@ export const FormWrapper = styled.form`
       margin-bottom: 1rem;
 
       .error {
-        font-size: ${({theme}) => theme.$fontsSize.$secondary}
-        margin-top: 0.5rem;;
+        font-size: ${({theme}) => theme.$fontsSize.$secondary};
+        margin-top: 0.5rem;
         color: brown;
       }
 
@@ -58,9 +58,9 @@ export const FormWrapper = styled.form`
         background-color: transparent;
 
         &:focus {
-          color: ${({theme}) => theme.$textColors.$secondary}
+          color: ${({theme}) => theme.$textColors.$secondary};
           border-color: ${({theme}) => theme.$textColors.$primary};
-          outline: none;;
+          outline: none;
         }
 
         &.incorrect {
@@ -73,38 +73,38 @@ export const FormWrapper = styled.form`
 
         &[name="firstName"]:placeholder-shown, &[name="lastName"]:placeholder-shown {
           background: -webkit-linear-gradient(left, 
-                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
-                                              ${({theme}) => theme.$textColors.$secondary} 48 %,
-                                              red 48 %, red 100 %);
-                      -webkit-background-clip:text;
-                      -webkit-text-fill-color:transparent;
+                                              ${({theme}) => theme.$textColors.$secondary} 0%,
+                                              ${({theme}) => theme.$textColors.$secondary} 48%,
+                                              red 48%, red 100%);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
         }
 
         &[name="email"]:placeholder-shown {
           background: -webkit-linear-gradient(left, 
-                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
-                                              ${({theme}) => theme.$textColors.$secondary} 30 %,
-                                              red 30 %, red 100 %);
-                      -webkit-background-clip:text;
-                      -webkit-text-fill-color:transparent;
+                                              ${({theme}) => theme.$textColors.$secondary} 0%,
+                                              ${({theme}) => theme.$textColors.$secondary} 30%,
+                                              red 30%, red 100%);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
         }
 
         &[name="password"]:placeholder-shown {
           background: -webkit-linear-gradient(left,
-                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
-                                              ${({theme}) => theme.$textColors.$secondary} 22 %,
-                                              red 22 %, red 100 %);
-                      -webkit-background-clip:text;
-                      -webkit-text-fill-color:transparent;
+                                              ${({theme}) => theme.$textColors.$secondary} 0%,
+                                              ${({theme}) => theme.$textColors.$secondary} 22%,
+                                              red 22%, red 100%);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
         }
 
         &[name="confirmPassword"]:placeholder-shown {
           background: -webkit-linear-gradient(left, 
-                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
-                                              ${({theme}) => theme.$textColors.$secondary} 37 %,
-                                              red 37 %, red 100 %);
-                      -webkit-background-clip:text;
-                      -webkit-text-fill-color:transparent;
+                                              ${({theme}) => theme.$textColors.$secondary} 0%,
+                                              ${({theme}) => theme.$textColors.$secondary} 37%,
+                                              red 37%, red 100 %);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
         }
       }
 
@@ -128,13 +128,12 @@ export const FormWrapper = styled.form`
 
           .checkbox-sign {
             display: block;
-            min-width: 0.9rem;;
+            min-width: 0.9rem;
             max-width: 0.9rem;
             min-height: 0.9rem;
             max-height: 0.9rem;
             margin: 0 0.5rem 0 0;
             text-align: center;
-
             color: rgba(0, 0, 0, 0.0);
             border: 0.1rem solid ${({theme}) => theme.$textColors.$secondary};
             border-radius: 0.2rem;
@@ -144,7 +143,7 @@ export const FormWrapper = styled.form`
 
         .checkbox-desc {
           font-size: ${({theme}) => theme.$fontsSize.$secondary};
-          line-height: 1rem;;
+          line-height: 1rem;
           color: ${({theme}) => theme.$textColors.$secondary};
         }
       }
@@ -199,8 +198,8 @@ export const FormWrapper = styled.form`
 
   a, .link {
     font-size: ${({theme}) => theme.$fontsSize.$secondary};
-    display: block;;
-    float: right;;
+    display: block;
+    float: right;
     text-decoration: none;
     color: ${({theme}) => theme.$textColors.$link};
 

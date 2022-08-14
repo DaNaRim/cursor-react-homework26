@@ -121,12 +121,12 @@ export const FormWrapper = styled.form`
             display: none;
 
             &:checked + label {
-              color: ${({theme}) => theme.$textColors.$secondary};
-              background-color: transparent;
+              color: red;
             }
           }
 
           .checkbox-sign {
+            font-size: 0.6rem;
             display: block;
             min-width: 0.9rem;
             max-width: 0.9rem;
@@ -134,7 +134,7 @@ export const FormWrapper = styled.form`
             max-height: 0.9rem;
             margin: 0 0.5rem 0 0;
             text-align: center;
-            color: rgba(0, 0, 0, 0.0);
+            color: transparent;
             border: 0.1rem solid ${({theme}) => theme.$textColors.$secondary};
             border-radius: 0.2rem;
             background-color: transparent;

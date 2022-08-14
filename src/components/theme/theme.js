@@ -20,13 +20,11 @@ export const darkTheme = {
   $fontsSize: {
     $h1: "1.5rem",
     $secondary: "0.8rem"
-
   },
 
   $borderRadius: {
     $primary: "0.2rem"
   }
-
 }
 
 

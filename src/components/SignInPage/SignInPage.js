@@ -1,4 +1,4 @@
-import React, {useCallback} from "react"
+import React, {useCallback, useEffect} from "react"
 import {Link} from "react-router-dom"
 import lockImg from "../../assets/icons/padlock.png"
 import {getLocalLoggedUser, getLocalUsers, setLocalLoggedUser} from "../../utils/localStorageFunctions"
@@ -64,8 +64,8 @@ const SignInPage = () => {
       password,
       rememberMe
     }
-
     setLocalLoggedUser(loggedUser)
+
     alert("You have successfully signed in!")
   }
 
@@ -73,6 +73,10 @@ const SignInPage = () => {
     e.preventDefault()
     alert("You have successfully forgotten your password!")
   }
+
+  useEffect(() => {
+    validateForm()
+  }, [email, password, validateForm])
 
   return (
     <SignUpPageWrapper>
@@ -88,6 +92,7 @@ const SignInPage = () => {
         <div className="fields">
           <div className="input_wrapper">
             <input type="email"
+                   className={submitted && errors.email ? "incorrect" : "correct"}
                    name="email"
                    placeholder="Email address *"
                    title="Email address"
@@ -96,11 +101,13 @@ const SignInPage = () => {
                    onChange={e => setEmail(e.target.value)}
             />
             {submitted && errors.email && <div className="error">{errors.email}</div>}
-            {submitted && !errors.email && errors.emailIncorrect &&
-              <div className="error">{errors.emailIncorrect}</div>}
+            {submitted && !errors.email && errors.email
+              && <div className="error">{errors.emailIncorrect}</div>
+            }
           </div>
           <div className="input_wrapper">
             <input type="password"
+                   className={submitted && errors.password ? "incorrect" : "correct"}
                    name="password"
                    placeholder="Password *"
                    title="Password"
@@ -109,8 +116,9 @@ const SignInPage = () => {
                    onChange={e => setPassword(e.target.value)}
             />
             {submitted && errors.password && <div className="error">{errors.password}</div>}
-            {submitted && !errors.password && errors.passwordIncorrect &&
-              <div className="error">{errors.passwordIncorrect}</div>}
+            {submitted && !errors.password && errors.passwordIncorrect
+              && <div className="error">{errors.passwordIncorrect}</div>
+            }
           </div>
           <div className="input_wrapper">
             <div className="checkbox">

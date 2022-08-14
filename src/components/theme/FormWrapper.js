@@ -2,15 +2,15 @@ import styled from "styled-components"
 
 export const FormWrapper = styled.form`
   font-family: ${({theme}) => theme.$fonts.$primary};
-  margin: 0 auto;
   width: 25rem;
   max-width: 25rem;
+  margin: 0 auto;
   padding: 2.5rem;
   border: 1px solid ${({theme}) => theme.$blockColors.$borderColor};
 
   header {
-    margin: 0 auto 1.5rem auto;
     width: fit-content;
+    margin: 0 auto 1.5rem auto;
 
     .img_wrapper {
       position: relative;
@@ -21,11 +21,11 @@ export const FormWrapper = styled.form`
       background-color: ${({theme}) => theme.$blockColors.$formIconColor};
 
       img {
-        width: 50%;
-        height: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 50%;
+        height: 50%;
         transform: translate(-50%, -50%);
       }
     }
@@ -43,8 +43,8 @@ export const FormWrapper = styled.form`
       margin-bottom: 1rem;
 
       .error {
-        margin-top: 0.5rem;
-        font-size: ${({theme}) => theme.$fontsSize.$secondary};
+        font-size: ${({theme}) => theme.$fontsSize.$secondary}
+        margin-top: 0.5rem;;
         color: brown;
       }
 
@@ -52,15 +52,15 @@ export const FormWrapper = styled.form`
         width: 100%;
         height: 2.5rem;
         padding: 0.5rem;
+        color: ${({theme}) => theme.$textColors.$secondary};
         border: 2px solid ${({theme}) => theme.$blockColors.$borderColor};
         border-radius: ${({theme}) => theme.$borderRadius.$primary};
-        color: ${({theme}) => theme.$textColors.$secondary};
         background-color: transparent;
 
         &:focus {
-          outline: none;
+          color: ${({theme}) => theme.$textColors.$secondary}
           border-color: ${({theme}) => theme.$textColors.$primary};
-          color: ${({theme}) => theme.$textColors.$secondary};
+          outline: none;;
         }
 
         &.incorrect {
@@ -72,35 +72,39 @@ export const FormWrapper = styled.form`
         }
 
         &[name="firstName"]:placeholder-shown, &[name="lastName"]:placeholder-shown {
-          background: -webkit-linear-gradient(left, ${({theme}) => theme.$textColors.$secondary} 0%,
-          ${({theme}) => theme.$textColors.$secondary} 48%,
-          red 48%, red 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          background: -webkit-linear-gradient(left, 
+                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
+                                              ${({theme}) => theme.$textColors.$secondary} 48 %,
+                                              red 48 %, red 100 %);
+                      -webkit-background-clip:text;
+                      -webkit-text-fill-color:transparent;
         }
 
         &[name="email"]:placeholder-shown {
-          background: -webkit-linear-gradient(left, ${({theme}) => theme.$textColors.$secondary} 0%,
-          ${({theme}) => theme.$textColors.$secondary} 30%,
-          red 30%, red 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          background: -webkit-linear-gradient(left, 
+                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
+                                              ${({theme}) => theme.$textColors.$secondary} 30 %,
+                                              red 30 %, red 100 %);
+                      -webkit-background-clip:text;
+                      -webkit-text-fill-color:transparent;
         }
 
         &[name="password"]:placeholder-shown {
-          background: -webkit-linear-gradient(left, ${({theme}) => theme.$textColors.$secondary} 0%,
-          ${({theme}) => theme.$textColors.$secondary} 22%,
-          red 22%, red 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          background: -webkit-linear-gradient(left,
+                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
+                                              ${({theme}) => theme.$textColors.$secondary} 22 %,
+                                              red 22 %, red 100 %);
+                      -webkit-background-clip:text;
+                      -webkit-text-fill-color:transparent;
         }
 
         &[name="confirmPassword"]:placeholder-shown {
-          background: -webkit-linear-gradient(left, ${({theme}) => theme.$textColors.$secondary} 0%,
-          ${({theme}) => theme.$textColors.$secondary} 37%,
-          red 37%, red 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          background: -webkit-linear-gradient(left, 
+                                              ${({theme}) => theme.$textColors.$secondary} 0 %,
+                                              ${({theme}) => theme.$textColors.$secondary} 37 %,
+                                              red 37 %, red 100 %);
+                      -webkit-background-clip:text;
+                      -webkit-text-fill-color:transparent;
         }
       }
 
@@ -123,33 +127,33 @@ export const FormWrapper = styled.form`
           }
 
           .checkbox-sign {
-            margin: 0 0.5rem 0 0;
-            border: 0.1rem solid ${({theme}) => theme.$textColors.$secondary};
-            color: rgba(0, 0, 0, 0.0);
-            border-radius: 0.2rem;
-            background-color: transparent;
             display: block;
-            text-align: center;
-
-            min-width: 0.9rem;
+            min-width: 0.9rem;;
             max-width: 0.9rem;
             min-height: 0.9rem;
             max-height: 0.9rem;
+            margin: 0 0.5rem 0 0;
+            text-align: center;
+
+            color: rgba(0, 0, 0, 0.0);
+            border: 0.1rem solid ${({theme}) => theme.$textColors.$secondary};
+            border-radius: 0.2rem;
+            background-color: transparent;
           }
         }
 
         .checkbox-desc {
           font-size: ${({theme}) => theme.$fontsSize.$secondary};
+          line-height: 1rem;;
           color: ${({theme}) => theme.$textColors.$secondary};
-          line-height: 1rem;
         }
       }
     }
 
     fieldset {
-      width: 100%;
       display: flex;
       justify-content: space-between;
+      width: 100%;
 
       .input_wrapper {
         width: 47.5%;
@@ -158,8 +162,8 @@ export const FormWrapper = styled.form`
 
 
     p {
-      margin-bottom: 0.5rem;
       font-size: 0.8rem;
+      margin-bottom: 0.5rem;
       color: ${({theme}) => theme.$textColors.$secondary};
 
       span {
@@ -168,21 +172,21 @@ export const FormWrapper = styled.form`
     }
 
     button {
+      font-weight: bold;
       width: 100%;
       height: 2rem;
-      border: none;
-      background-color: ${({theme}) => theme.$blockColors.$buttonColor};
-      border-radius: ${({theme}) => theme.$borderRadius.$primary};
-      text-transform: uppercase;
-      font-weight: bold;
-      color: ${({theme}) => theme.$blockColors.$primary};
       margin-bottom: 0;
       cursor: pointer;
+      text-transform: uppercase;
+      color: ${({theme}) => theme.$blockColors.$primary};
+      border: none;
+      border-radius: ${({theme}) => theme.$borderRadius.$primary};
+      background-color: ${({theme}) => theme.$blockColors.$buttonColor};
 
       &:hover {
-        background-color: ${({theme}) => theme.$blockColors.$primary};
         color: ${({theme}) => theme.$blockColors.$buttonColor};
         border: 1px solid ${({theme}) => theme.$blockColors.$buttonColor};
+        background-color: ${({theme}) => theme.$blockColors.$primary};
       }
     }
   }
@@ -194,11 +198,11 @@ export const FormWrapper = styled.form`
   margin-top: 0.8rem;
 
   a, .link {
-    display: block;
     font-size: ${({theme}) => theme.$fontsSize.$secondary};
-    color: ${({theme}) => theme.$textColors.$link};
+    display: block;;
+    float: right;;
     text-decoration: none;
-    float: right;
+    color: ${({theme}) => theme.$textColors.$link};
 
     &:only-child {
       margin-left: auto;
@@ -209,7 +213,6 @@ export const FormWrapper = styled.form`
     }
   }
 }
-
 
 footer {
   font-size: ${({theme}) => theme.$fontsSize.$secondary};

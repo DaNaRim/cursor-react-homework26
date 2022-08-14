@@ -1,4 +1,4 @@
-import React, {useCallback} from "react"
+import React, {useCallback, useEffect} from "react"
 import {Link} from "react-router-dom"
 
 import lockImg from "../../assets/icons/padlock.png"
@@ -74,6 +74,10 @@ const SignUpPage = () => {
     setErrors(errors)
     return errors
   }, [firstName, lastName, email, password, confirmPassword])
+
+  useEffect(() => {
+    validateForm()
+  }, [firstName, lastName, email, password, confirmPassword, validateForm])
 
   return (
     <SignUpPageWrapper>

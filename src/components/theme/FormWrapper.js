@@ -102,7 +102,7 @@ export const FormWrapper = styled.form`
           background: -webkit-linear-gradient(left, 
                                               ${({theme}) => theme.$textColors.$secondary} 0%,
                                               ${({theme}) => theme.$textColors.$secondary} 37%,
-                                              red 37%, red 100 %);
+                                              red 37%, red 100%);
                       -webkit-background-clip: text;
                       -webkit-text-fill-color: transparent;
         }

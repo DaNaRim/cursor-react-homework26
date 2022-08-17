@@ -86,13 +86,13 @@ const SignInPage = () => {
           <div className="img_wrapper">
             <img src={lockImg} alt="lock"/>
           </div>
-          <h1>Sign up</h1>
+          <h1>Sign in</h1>
         </header>
 
         <div className="fields">
           <div className="input_wrapper">
             <input type="email"
-                   className={submitted && errors.email ? "incorrect" : "correct"}
+                   className={submitted && (errors.email || errors.emailIncorrect) ? "incorrect" : "correct"}
                    name="email"
                    placeholder="Email address *"
                    title="Email address"
@@ -101,13 +101,13 @@ const SignInPage = () => {
                    onChange={e => setEmail(e.target.value)}
             />
             {submitted && errors.email && <div className="error">{errors.email}</div>}
-            {submitted && !errors.email && errors.email
+            {submitted && !errors.email && errors.emailIncorrect
               && <div className="error">{errors.emailIncorrect}</div>
             }
           </div>
           <div className="input_wrapper">
             <input type="password"
-                   className={submitted && errors.password ? "incorrect" : "correct"}
+                   className={submitted && (errors.password || errors.passwordIncorrect) ? "incorrect" : "correct"}
                    name="password"
                    placeholder="Password *"
                    title="Password"
